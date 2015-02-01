@@ -1,0 +1,14 @@
+language: node_js
+
+node_js:
+ - 0.10
+
+before_script:
+ - export DISPLAY=:99.0
+ - sh -e /etc/init.d/xvfb start
+ - npm install -g grunt-cli
+ - npm install
+ - wget -P test/lib/angular/ http://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.js
+
+script:
+ - grunt travis-ci
