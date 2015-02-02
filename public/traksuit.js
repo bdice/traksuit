@@ -11,7 +11,7 @@ app.controller('TraksuitController', ['$scope', '$mdSidenav', 'DataService', '$t
 
   var timeChartOptions = {
     axes: {
-      x: {key: 'time', labelFunction: function(value) {return value.toLocaleTimeString();}, type: 'date', ticks: 5},
+      x: {key: 'time', labelFunction: function(value) {return value.toLocaleTimeString();}, type: 'date', ticks: 3},
       y: {type: 'linear'}
     },
     series: [
@@ -27,7 +27,7 @@ app.controller('TraksuitController', ['$scope', '$mdSidenav', 'DataService', '$t
 
   var correlationChartOptions = {
     axes: {
-      x: {key: 'value1', labelFunction: function(value) {return value;}, type: 'linear', ticks: 5},
+      x: {key: 'value1', labelFunction: function(value) {return value;}, type: 'linear', ticks: 3},
       y: {type: 'linear'}
     },
     series: [
